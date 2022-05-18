@@ -1,0 +1,30 @@
+{
+    "AttributeDefinitions": [
+        {
+          "AttributeName": "Season",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "Episode",
+          "AttributeType": "N"
+        }
+      ],
+      "KeySchema": [
+        {
+          "AttributeName": "Season",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "Episode",
+          "KeyType": "RANGE"
+        }
+      ],
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+      },
+      "TableName": "TEST_TABLE",
+      "StreamSpecification": {
+        "StreamEnabled": false
+      }
+}

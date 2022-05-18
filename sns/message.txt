@@ -1,0 +1,5 @@
+{
+    "Name": "Charizard",
+    "Type": "Fire",
+    "Level": "77"
+}
