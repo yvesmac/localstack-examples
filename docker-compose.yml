@@ -7,7 +7,7 @@ services:
       - 4510-4559:4510-4559
       - 4566:4566
     environment:
-      - SERVICES=sqs,sns,dynamodb
+      - SERVICES=sqs,sns,dynamodb,secretsmanager
       - DEBUG=1
   
   awsCli:

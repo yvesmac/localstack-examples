@@ -10,4 +10,6 @@ aws --endpoint-url=http://awsLocalStack:4566 dynamodb create-table --cli-input-j
 aws --endpoint-url=http://awsLocalStack:4566 dynamodb list-tables
 aws --endpoint-url=http://awsLocalStack:4566 sns publish --topic-arn arn:aws:sns:sa-east-1:000000000000:demoTopic --message "Hello World"
 aws --endpoint-url=http://awsLocalStack:4566 sns publish --topic-arn arn:aws:sns:sa-east-1:000000000000:demoTopic --message file://sns/message.txt
+aws --endpoint-url=http://awsLocalStack:4566 secretsmanager create-secret --name SqlServer-pass-secret --description "password secret" --secret-string "SuperP@ssw0rd"
+aws --endpoint-url=http://awsLocalStack:4566 secretsmanager list-secrets
 tail -f /dev/null
